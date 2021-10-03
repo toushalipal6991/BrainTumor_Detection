@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detecting Tumor</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="color: white;background-color: black">
+	<h1 class="text-center">Brain Tumor Detection</h1>
+	<div style="margin-top: 10%">
+		<form class="text-center" action="/predict" method="post" enctype="multipart/form-data">
+		<ul style="list-style-type: none;">
+			<li><input class="text-center" type="file" name="imagefile" class="form-control"></li>
+			<li><input type="submit" class="btn btn-primary mt-3" value="Predict Image"></li>
+		</ul>
+	</form>
+	</div>
+	
+	{% if prediction %}
+	<p class="text-center">{{prediction}}</p>
+	{% endif %}
+</body>
+</html>
