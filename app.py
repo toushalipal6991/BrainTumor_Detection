@@ -21,6 +21,8 @@ from flask import Flask,redirect, url_for, request, render_template
 import flask
 app = Flask(__name__)
 
+best = load_model("best_model.h5")
+
 
 ###################################################
 #Adding image pre-processing function
@@ -33,7 +35,7 @@ def predict_tumor(img_path):
     img_array = np.array([img])
     # plt.imshow(img_array[0])
     # plt.show()
-    best = load_model("best_model.h5")
+    # best = load_model("best_model.h5")
     if best.predict(img_array)[0][0]>0.45:
         return "This MRI scan indicates presence of Brain tumor"
     else:
