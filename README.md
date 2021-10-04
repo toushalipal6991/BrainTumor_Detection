@@ -1,4 +1,4 @@
-# :stethoscope: :drop_of_blood: Deep Learning (CNN) END-TO-END Deep Learning Project for Detection of Brain Tumor Based on MRI scan images of Brain
+# :stethoscope: :drop_of_blood: END-TO-END Deep Learning Project for Detection of Brain Tumor Based on MRI scan images of Brain
 ## :cinema: Demo :point_down:
 
 ![Demo](https://github.com/toushalipal6991/BrainTumor_Detection/blob/master/BrainTumorDetection%20-%20Copy.gif)
