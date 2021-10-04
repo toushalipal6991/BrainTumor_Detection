@@ -20,7 +20,11 @@ for Image Augmentation.
 - Below table respresents each CNN architecture used and their test accuracies:-
 ![Table](https://github.com/toushalipal6991/BrainTumor_Detection/blob/master/AccuracyTable.PNG)
 - Model-4: Transfer Learning for Feature Extraction via VGG16 + Data Augmentation had the highest accuracy of 96.706% and hence, it has been finalized for deployment.
-- API used for Deployment :arrow_right: Flask. This simple web-app (as represented in the Demo) helps you upload the image and predicts whether the MRI scan image fed, contains tumor or not.
+
+## Deployment Using Flask API
+- API used for Deployment :arrow_right: Flask. 
+- This simple web-app (as represented in the Demo) helps you upload the image and predicts whether the MRI scan image fed, contains tumor or not.
+- To understand how Flask API was used to deploy, please refer my documentation on my other repository [Deployment using Flask API](https://github.com/toushalipal6991/BankNoteCheck/blob/master/Flask_Docker_AWS_Procedures.docx)
 
 ## :file_folder: Libraries Used
 :crayon: Tensorflow :crayon: Keras :crayon: matplotlib :crayon: seaborn :crayon: numpy :crayon: pandas :crayon: random :crayon: shutil :crayon: prettytable :crayon: Flask
