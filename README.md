@@ -22,4 +22,8 @@ for Image Augmentation.
 - API used for Deployment :arrow_right: Flask. This simple web-app (as represented in the Demo) helps you upload the image and predicts whether the MRI scan image fed, contains tumor or not.
 
 ## :file_folder: Libraries Used
-:crayon: matplotlib :crayon: numpy
+:crayon: Tensorflow :crayon: Keras :crayon: matplotlib :crayon: seaborn :crayon: numpy :crayon: pandas :crayon: random :crayon: shutil :crayon: prettytable :crayon: Flask
+
+## :hammer_and_wrench: :toolbox: Tools Used
+- Jupyter Notebook
+- Sublime Text
