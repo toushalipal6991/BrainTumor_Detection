@@ -34,8 +34,8 @@ def predict_tumor(img_path):
     # plt.imshow(img_array[0])
     # plt.show()
     best = load_model("best_model.h5")
-    if best.predict(img_array)[0][0]>0.4:
-        return "The image indicates presence of Brain tumor"
+    if best.predict(img_array)[0][0]>0.45:
+        return "This MRI scan indicates presence of Brain tumor"
     else:
         return "This is a Healthy Brain"
     # return best.predict(img_array)[0][0]
@@ -48,10 +48,13 @@ def welcome():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    imagefile=request.files['imagefile']
-    image_path = "./images/" + imagefile.filename
-    imagefile.save(image_path)
-    return render_template('index.html',prediction=predict_tumor(image_path))
+    if request.method == "POST":
+        imagefile=request.files['imagefile']
+        if imagefile:
+            image_path = "./static/" + imagefile.filename
+            imagefile.save(image_path)
+            return render_template('index.html',prediction=predict_tumor(image_path),imageloc=imagefile.filename)
+    return render_template('index.html',prediction=predict_tumor(image_path),imageloc = None)
 
 
 if __name__ == "__main__":
