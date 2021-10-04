@@ -4,7 +4,8 @@
 ![Demo](https://github.com/toushalipal6991/BrainTumor_Detection/blob/master/BrainTumorDetection%20-%20Copy.gif)
 
 ## Aim of this Project
-This project aims to detect Brain tumor as and when the Deep Learning model (CNN has been extensively used) is fed with MRI scan images of brains of different patients.
+- This project aims to detect Brain tumor as and when the Deep Learning model (CNN has been extensively used) is fed with MRI scan images of brains of different patients.
+- This project was also *Deployed using Flask API*.
 
 ## Datasets:-
 - Training Dataset :arrow_right: [Edureka](https://www.youtube.com/watch?v=7MceDfpnP8k)
