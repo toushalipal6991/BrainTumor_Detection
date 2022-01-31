@@ -1,27 +1,14 @@
-import warnings
-warnings.filterwarnings("ignore")
-import matplotlib.pyplot as plt
-from matplotlib.image import imread
-import os
 import numpy as np
-import pandas as pd
-import random
-import shutil
-from tensorflow.keras.preprocessing.image import ImageDataGenerator,load_img,img_to_array
-from tensorflow.keras.models import Sequential,Model,load_model
-from tensorflow.keras.layers import Conv2D,MaxPooling2D,Flatten,Dense,Dropout
-import math
-import seaborn as sns
-from tensorflow.keras.callbacks import Callback,ModelCheckpoint,EarlyStopping,ReduceLROnPlateau,LearningRateScheduler
-from tensorflow.keras.applications.vgg16 import VGG16,preprocess_input
-from prettytable import PrettyTable
+from tensorflow.keras.preprocessing.image import load_img,img_to_array
+from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.vgg16 import preprocess_input
 from flask import Flask,redirect, url_for, request, render_template
 
 
 import flask
 app = Flask(__name__)
 
-best = load_model("best_model.h5")
+best = load_model("save_model4.h5")
 
 
 ###################################################
@@ -29,18 +16,16 @@ best = load_model("best_model.h5")
 def predict_tumor(img_path):
     print("entered predict tumor")
     # load the image
-    img = load_img(img_path,target_size=(224,224))
+    img = load_img(img_path, target_size=(224, 224))  #(224,224,3)
     # convert to array
-    img = img_to_array(img)/255
-    img_array = np.array([img])
-    # plt.imshow(img_array[0])
-    # plt.show()
-    # best = load_model("best_model.h5")
-    if best.predict(img_array)[0][0]>0.45:
+    img = img_to_array(img) #(224,224,3)
+    # add batch size as a dimension 
+    img = np.expand_dims(img, axis=0)  #(1,224,224,3)
+    if best.predict(img)[0][0]>0.45:  # just a threshold
         return "This MRI scan indicates presence of Brain tumor"
     else:
         return "This is a Healthy Brain"
-    # return best.predict(img_array)[0][0]
+
 ###################################################
 
 @app.route('/', methods=['GET'])
