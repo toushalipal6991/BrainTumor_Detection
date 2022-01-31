@@ -18,8 +18,8 @@ for Image Augmentation.
 - Choosing Model Architectures :arrow_right: 4 different CNN archiectures were used. 
 - Each of these models were fed with a completely unseen Test set of images and final accuracy was determined on the basis of prediction accuracy.
 - Below table respresents each CNN architecture used and their test accuracies:-
-![Table](https://github.com/toushalipal6991/BrainTumor_Detection/blob/master/AccuracyTable.PNG)
-- Model-4: Transfer Learning for Feature Extraction via VGG16 + Data Augmentation had the highest accuracy of 96.706% and hence, it has been finalized for deployment.
+![Table](https://github.com/toushalipal6991/BrainTumor_Detection/blob/master/newAccuracyTable.PNG)
+- Model-4: Transfer Learning for Feature Extraction via VGG16 + Data Augmentation was saved, it has been finalized for deployment.
 
 ## Deployment Using Flask API
 - API used for Deployment :arrow_right: Flask. 
