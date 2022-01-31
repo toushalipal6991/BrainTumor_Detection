@@ -3,6 +3,8 @@
 
 ![Demo](https://github.com/toushalipal6991/BrainTumor_Detection/blob/master/BrainTumorDetection%20-%20Copy.gif)
 
+## Self-written Blog: [Brain Tumor Detection & Transfer Learning using VGG16](https://medium.com/@toushalipal6991/brain-tumor-detection-transfer-learning-using-vgg16-a0d0a31f2e9)
+
 ## Aim of this Project
 - This project aims to detect Brain tumor as and when the Deep Learning model (CNN has been extensively used) is fed with MRI scan images of brains of different patients.
 - This project was also *Deployed using Flask API*.
